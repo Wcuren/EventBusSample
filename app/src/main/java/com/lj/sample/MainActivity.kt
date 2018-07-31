@@ -5,7 +5,7 @@ import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
-import com.lj.sample.event.MessageEvent
+import com.lj.sample.event.FirstEvent
 import org.greenrobot.eventbus.EventBus
 import org.greenrobot.eventbus.Subscribe
 import org.greenrobot.eventbus.ThreadMode
@@ -30,7 +30,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     @Subscribe(threadMode = ThreadMode.MAIN)
-    fun onMessage(event : MessageEvent) {
+    fun onMessage(event : FirstEvent) {
         tv!!.text = event.message
     }
 
